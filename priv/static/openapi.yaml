@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: Example Phoenix ChatGPT Plgin
+  description: An example Phoenix and ChatGPT Plugin
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000/api/chatgpt
+paths:
+  /search:
+    post:
+      operationId: searchDocuments
+      summary: Search for personal documents
+      description: This endpoint takes a query and searches for related personal documents.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - query
+              properties:
+                query:
+                  type: string
+                  description: The document description to search for.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        title:
+                          type: string
+                          description: The document title.
+                        contents:
+                          type: string
+                          description: The document contents.

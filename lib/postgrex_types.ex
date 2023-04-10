@@ -1,0 +1,1 @@
+Postgrex.Types.define(PhoenixChatgptPlugin.PostgrexTypes, [Pgvector.Extensions.Vector] ++ Ecto.Adapters.Postgres.extensions(), [])

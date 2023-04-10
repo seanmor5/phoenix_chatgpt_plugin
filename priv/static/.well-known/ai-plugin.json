@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Phoenix Plugin",
+  "name_for_model": "phoenix_plugin",
+  "description_for_human": "Example Elixir, Phoenix, Nx, and Bumblebee ChatGPT plugin.",
+  "description_for_model": "Plugin for retrieving personal documents",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:4000/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://raw.githubusercontent.com/phoenixframework/phoenix/main/priv/static/phoenix.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "http://www.example.com/legal"
+}
